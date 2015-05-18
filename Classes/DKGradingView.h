@@ -10,4 +10,7 @@
 
 @interface DKGradingView : UIView
 
+@property (nonatomic, strong) UIImage *gradingImage;
+@property (nonatomic, strong) UIImage *ungradingImage;
+
 @end
