@@ -14,6 +14,7 @@
 		188C678C1B098FB300323C03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188C678B1B098FB300323C03 /* Images.xcassets */; };
 		188C678F1B098FB300323C03 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188C678D1B098FB300323C03 /* LaunchScreen.xib */; };
 		188C679B1B098FB300323C03 /* DKGradingViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 188C679A1B098FB300323C03 /* DKGradingViewTests.m */; };
+		188C67A71B098FD300323C03 /* DKGradingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 188C67A61B098FD300323C03 /* DKGradingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		188C67941B098FB300323C03 /* DKGradingViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKGradingViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		188C67991B098FB300323C03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		188C679A1B098FB300323C03 /* DKGradingViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKGradingViewTests.m; sourceTree = "<group>"; };
+		188C67A51B098FD300323C03 /* DKGradingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKGradingView.h; sourceTree = "<group>"; };
+		188C67A61B098FD300323C03 /* DKGradingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKGradingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		188C677D1B098FB300323C03 /* DKGradingView */ = {
 			isa = PBXGroup;
 			children = (
+				188C67A41B098FC300323C03 /* Classes */,
 				188C67821B098FB300323C03 /* AppDelegate.h */,
 				188C67831B098FB300323C03 /* AppDelegate.m */,
 				188C67851B098FB300323C03 /* ViewController.h */,
@@ -118,6 +122,15 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		188C67A41B098FC300323C03 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				188C67A51B098FD300323C03 /* DKGradingView.h */,
+				188C67A61B098FD300323C03 /* DKGradingView.m */,
+			);
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -219,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188C67A71B098FD300323C03 /* DKGradingView.m in Sources */,
 				188C67871B098FB300323C03 /* ViewController.m in Sources */,
 				188C67841B098FB300323C03 /* AppDelegate.m in Sources */,
 				188C67811B098FB300323C03 /* main.m in Sources */,
