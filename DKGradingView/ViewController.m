@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DKGradingView.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
+    DKGradingView *gradingView = [[DKGradingView alloc] initWithFrame:CGRectMake(0, 20, 310, 70)];
+//    gradingView.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:gradingView];
 }
 
 - (void)didReceiveMemoryWarning {
