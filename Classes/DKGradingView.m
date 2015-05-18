@@ -19,23 +19,29 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        self.totalGrade = 5;
+        self.totalGrade = 10;
+
         self.gradingImage = [UIImage imageNamed:@"selected"];
         self.ungradingImage = [UIImage imageNamed:@"unselected"];
-        CGFloat offset = 10;
+
+
         CGFloat height = frame.size.height;
         CGFloat width = frame.size.width;
 
-        CGFloat blankWidth = (self.totalGrade + 1) * offset;
+        CGFloat ratio = 5;
+        CGFloat offset = width / (6 * self.totalGrade - 1);
 
-        CGFloat componentSize = MIN((width - blankWidth) / self.totalGrade, height - 2 * offset);
+        CGFloat componentSize = MIN(ratio * offset, height);
         __unused CGSize size = CGSizeMake(componentSize, componentSize);
-        for (NSNumber *number in @[@0, @1, @2, @3, @4]) {
-            CGFloat imageViewWidth = offset + (componentSize + offset) * number.integerValue;
-            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(imageViewWidth, offset, componentSize, componentSize)];
+        for (int i = 0; i < self.totalGrade; i++) {
+            CGFloat imageViewWidth = (componentSize + offset) * i;
+            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(imageViewWidth, 0, componentSize, componentSize)];
+            CGPoint center = imageView.center;
+            center.y = self.frame.size.height / 2;
+            imageView.center = center;
             imageView.image = self.ungradingImage;
             imageView.userInteractionEnabled = YES;
-            imageView.tag = number.integerValue;
+            imageView.tag = i;
             UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(grading:)];
             [imageView addGestureRecognizer:gesture];
             [self.thumbnailImageViews addObject:imageView];

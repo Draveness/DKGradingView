@@ -18,8 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    DKGradingView *gradingView = [[DKGradingView alloc] initWithFrame:CGRectMake(0, 20, 310, 70)];
-//    gradingView.backgroundColor = [UIColor lightGrayColor];
+    DKGradingView *gradingView = [[DKGradingView alloc] initWithFrame:CGRectMake(0, 20, 200, 40)];
     [self.view addSubview:gradingView];
 }
 
