@@ -19,7 +19,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        self.totalGrade = 10;
+        self.totalGrade = 5;
 
         self.gradingImage = [UIImage imageNamed:@"selected"];
         self.ungradingImage = [UIImage imageNamed:@"unselected"];
