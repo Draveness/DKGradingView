@@ -8,6 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DKGradingProtocol <NSObject>
+
+@optional
+
+/**
+ *  @author Draveness
+ *
+ *  Delegate method after grading
+ *
+ *  @param grade Current Point you get, you can also get the current grade from `currentGrade` property
+ */
+- (void)didGradingForInteger:(NSUInteger)grade;
+
+@end
+
 @interface DKGradingView : UIView
 
 /**
@@ -37,7 +52,7 @@
  *
  *  Current graing from 0 to max grade
  */
-@property (nonatomic, assign, readonly) NSUInteger currentPoint;
+@property (nonatomic, assign, readonly) NSUInteger currentGrade;
 
 /**
  *  @author Draveness
@@ -45,5 +60,12 @@
  *  Maximum grading, controls the small part number of grading view
  */
 @property (nonatomic, assign) NSUInteger totalGrade;
+
+/**
+ *  @author Draveness
+ *
+ *  Delegate is optional to implement method `didGradingForInteger:`
+ */
+@property (nonatomic, strong) id<DKGradingProtocol> delegate;
 
 @end

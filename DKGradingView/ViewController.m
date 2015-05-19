@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "DKGradingView.h"
 
-@interface ViewController ()
+@interface ViewController () <DKGradingProtocol>
 
 @end
 
@@ -19,7 +19,12 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     DKGradingView *gradingView = [[DKGradingView alloc] initWithFrame:CGRectMake(0, 20, 200, 40)];
+    gradingView.delegate = self;
     [self.view addSubview:gradingView];
+}
+
+- (void)didGradingForInteger:(NSUInteger)grade {
+    NSLog(@"%lu", (unsigned long)grade);
 }
 
 @end

@@ -11,6 +11,7 @@
 @interface DKGradingView ()
 
 @property (nonatomic, strong) NSMutableArray *thumbnailImageViews;
+@property (nonatomic, assign) NSUInteger currentGrade;
 
 @end
 
@@ -64,6 +65,8 @@
             imageView.image = self.ungradingImage;
         }
     }];
+    self.currentGrade = tag + 1;
+    [self.delegate didGradingForInteger:tag + 1];
 }
 
 #pragma mark - Setter/Getter
